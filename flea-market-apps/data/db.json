@@ -1,0 +1,84 @@
+{
+  "goods": [
+    {
+      "id": 2,
+      "title": "腕時計",
+      "image": "images/armClock.jpg",
+      "price": "￥800",
+      "category": "その他",
+      "explanation": "いつでもどこでも時間がわかる"
+    },
+    {
+      "id": 3,
+      "title": "斜めがけバック",
+      "image": "images/bag.jpg",
+      "price": "￥2,800",
+      "category": "ファッション",
+      "explanation": "お出かけ時の必須アイテム"
+    },
+    {
+      "id": 4,
+      "title": "壁掛け時計",
+      "image": "images/clock.jpg",
+      "price": "￥2,200",
+      "category": "インテリア",
+      "explanation": "オシャレな見た目の壁掛け時計"
+    },
+    {
+      "id": 5,
+      "title": "英単語帳",
+      "image": "images/Englishbook.jpg",
+      "price": "￥800",
+      "category": "本・マンガ",
+      "explanation": "大学受験や海外旅行で使える"
+    },
+    {
+      "id": 6,
+      "title": "上着",
+      "image": "images/jacket.jpg",
+      "price": "￥2,980",
+      "category": "ファッション",
+      "explanation": "カーキ色のジャケット"
+    },
+    {
+      "id": 7,
+      "title": "カンカン帽子",
+      "image": "images/kankanbou.jpg",
+      "price": "￥1,800",
+      "category": "ファッション",
+      "explanation": "夏のオシャレアイテム"
+    },
+    {
+      "id": 8,
+      "title": "マウス",
+      "image": "images/mouse.jpg",
+      "price": "￥1,800",
+      "category": "家電",
+      "explanation": "パソコンの常備アイテム"
+    },
+    {
+      "id": 9,
+      "title": "スマホ三脚",
+      "image": "images/smartphoneStand.jpg",
+      "price": "￥100",
+      "category": "その他",
+      "explanation": "固定撮影に便利、全くぶれない"
+    },
+    {
+      "id": 10,
+      "title": "スニーカー",
+      "image": "images/sneaker.jpg",
+      "price": "￥3,800",
+      "category": "ファッション",
+      "explanation": "人気ブランドの人気商品"
+    },
+    {
+      "title": "鬼滅の刃漫画",
+      "image": "images/本・マンガ.jpg",
+      "price": "¥2,500",
+      "category": "本・マンガ",
+      "explanation": "いま話題の作品の原作漫画です！",
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+.searchArea {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+  width: 2000px;
+  top: -15px;
+}
+.logo {
+  width: 170px;
+  margin-left: 20px;
+}
+.dropdown {
+  margin-left: 200px;
+  margin-right: 80px;
+  margin-top: 90px;
+}
+.searchBox {
+  margin-top: 90px;
+  width: 300px;
+  height: 30px;
+}
+.mark {
+  margin-top: 90px;
+}
+.toSell {
+  margin-top: 90px;
+  margin-left: 80px;
+}
+.dispArea {
+  margin-top: 200px;
+  width: 1000px;
+  margin-left: 50px;
+  background-color: #fcc;
+}
+#sellArea {
+  clear: left;
+  text-align: center;
+  margin: 80px;
+  border: solid 2px;
+}
+#buyArea {
+  text-align: center;
+  margin: 80px;
+  border: solid 2px;
+}
+.addBtn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #66c866;
+  color: #FFF;
+  border-bottom: solid 4px #449552;
+  border-radius: 3px;
+}
+.addBtn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+.deleteBtn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #d86666;
+  color: #FFF;
+  border-bottom: solid 4px #953333;
+  border-radius: 3px;
+}
+.deleteBtn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+form {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+table {
+  width: 600px;
+  margin-left: 260px;
+}
+th {
+  width: 200px;
+}
+td {
+  width: 200px;
+}

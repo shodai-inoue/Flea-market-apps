@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FreeMan</title>
+    <link rel="stylesheet" href="report2.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="report2.js"></script>
+  </head>
+  <body>
+    <div id="goodsApp">
+      <header>
+        <div class="searchArea">
+          <a href="index.html"><img class="logo" src="images/logo.png"></a>
+          <div class="space"></div>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              カテゴリから探す
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" v-on:click="searchFassion">ファッション</a>
+              <a class="dropdown-item" v-on:click="searchAppliances">家電</a>
+              <a class="dropdown-item" v-on:click="searchBooks">本・マンガ</a>
+              <a class="dropdown-item" v-on:click="searchNecessities">日用品</a>
+              <a class="dropdown-item" v-on:click="searchInterior">インテリア</a>
+              <a class="dropdown-item" v-on:click="searchOther">その他</a>
+            </div>
+          </div>
+          <input class="searchBox" type="text" v-model="input">
+          <a v-on:click="searchGoodByName"><img class="mark" src="images/search.png" width="30px"></a>
+          <div class="toSell">
+            <a href="#sellArea"><button class="btn btn-success">出品する</button></a>
+          </div>
+        </div>
+      </header>
+      <container>
+        <div class="dispArea">
+          <div class="good" v-for="good in goods" v-bind:key="good.id">
+            <div class="card bg-light mb-3" style="width: 20rem; height: 30rem; float: left">
+              <img v-bind:src="good.image" class="card-img-top" style="height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">{{ good.title }}</h5>
+                <p class="card-text">{{ good.price }}</p>
+                <p class="card-text">{{ good.explanation }}</p>
+                <p class="card-text">{{ good.category }}</p>
+                <p id="goodId" class="card-text">商品ID:{{ good.id }}</p>
+                <div class="text-right">
+                  <a href="#buyArea"><button class="btn btn-danger">購入する</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </container>
+      <div id="sellArea">
+        <h2>出品コーナー</h2>
+        <hr>
+        <p>以下のフォームに出品したい商品の情報を入力してください。</p>
+        <form>
+          <div class="form-group">
+            <label for="title">商品名</label>
+            <input type="text" class="form-control" v-model="title" placeholder="ここに商品名を入力">
+          </div>
+          <div class="form-group">
+            <label for="price">販売価格</label>
+            <input type="text" class="form-control" v-model="price" placeholder="ここに商品の販売価格を入力">
+          </div>
+          <div class="form-group">
+            <label for="explanation">商品説明</label>
+            <input type="text" class="form-control" v-model="explanation" placeholder="ここに商品の説明を入力">
+          </div>
+          <div class="form-group">
+            <label for="category">カテゴリ</label>
+            <select class="form-control" v-model="category">
+              <option>ファッション</option>
+              <option>家電</option>
+              <option>本・マンガ</option>
+              <option>日用品</option>
+              <option>インテリア</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="image">画像アップロード</label>
+            <input type="file" class="form-control-file" v-model="image">
+          </div>
+        </form>
+        <p>全ての項目が入力されていることを確認してから以下のボタンを押してください。</p>
+        <button class="addBtn" v-on:click="addEvent">出品する</button>
+      </div>
+      <div id="buyArea">
+        <h2>購入コーナー</h2>
+        <p>購入したい商品の商品IDを入力後、ボタンを押してください。</p>
+        <input class="number" type="number" v-model="number">
+        <button class="deleteBtn" v-on:click="deleteEvent">購入する</button>
+        <table border="1">
+          <tr>
+            <th>商品ID</th>
+            <th>商品名</th>
+            <th>価格</th>
+          </tr></table>
+          <div class="good" v-for="good in goods" v-bind:key="good.id">
+          <table border="1">
+            <tr>
+              <td>{{ good.id }}</td>
+              <td>{{ good.title }}</td>
+              <td>{{ good.price }}</td>
+            </tr>
+          </div>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
